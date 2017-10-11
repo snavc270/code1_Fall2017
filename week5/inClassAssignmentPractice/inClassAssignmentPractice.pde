@@ -21,8 +21,8 @@ void setup(){
 
 void draw(){
     //first step = writing a math function 
-    //result = multiple(4.0, 5.0); 
-    //println(result); 
+        //result = multiple(4.0, 5.0); 
+        //println(result); 
     
     result = multiply(num1, num2); 
     //displaying the result of that function 
@@ -46,7 +46,7 @@ void draw(){
 void mousePressed(){
   dist = dist(mouseX, mouseY, x, y); 
   if(dist <= size/2){
-    buttonClicked = !buttonClicked; 
+    buttonClicked = true; 
     num1 = random(0,100); 
     num2 = random(0,100); 
   }
