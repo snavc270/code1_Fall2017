@@ -4,7 +4,7 @@ int cols, rows;   // Number of columns and rows in our system
 
 void setup() {
   size(200, 200, P3D);
-  img = loadImage("sunflower.jpg"); // Load the image
+  img = loadImage("chuckie.jpg"); // Load the image
   cols = width/cellsize;              // Calculate # of columns
   rows = height/cellsize;             // Calculate # of rows
 }

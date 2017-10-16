@@ -4,8 +4,8 @@ PImage img;
 int pointillize = 16;
 
 void setup() {
-  size(200,200);
-  img = loadImage("sunflower.jpg");
+  size(800,1000);
+  img = loadImage("chuckie.jpg");
   background(255);
   smooth();
 }
