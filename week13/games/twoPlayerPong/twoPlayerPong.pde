@@ -24,7 +24,7 @@ void draw(){
     fill(0, 255, 0); 
     ellipse(ballX, ballY, d, d); 
     
-    fill(255); 
+    fill(255);
     text("player1: " + player1Score, width*.2, height*.10); 
     text("player2: " + player2Score, width*.7, height*.10);  
     
@@ -101,20 +101,29 @@ void reset(){
 }
 
 void checkCollision(){
+  //if my ball gets to the right boundary of the screen
+  //increase my player 1 score
+  //resetting the ball to the middle of the screen
   if(ballX >= width-d/2){
     player1Score += 1; 
     reset();
   }
   
+  //if my ball gets to the right boundary of the screen
+  //increase my player 2 score
+  //resetting the ball to the middle of the screen
   if(ballX <= d/2){
     player2Score += 1; 
     reset();
   }
   
+  //checking the top and bottom boundaries of our screen
+  //reversing the y speed if it hits top or bottom 
   if(ballY >= height-d/2 || ballY <= d/2){
     speedY *= -1.1; 
   }
   
+  //checking if ball hits my player 2 paddle
   if(ballX >= player2.xPos - d/2 && ballY>= (player2.yPos-player2.rectSize/2) && 
     ballY<= (player2.yPos+player2.rectSize/2)){
     speedX *= -1.1; 
